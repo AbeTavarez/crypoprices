@@ -39,5 +39,23 @@ export default function Price(props) {
   // show a loading message
   const loading = () => <h1>Loading...</h1>;
 
-  return coin && coin.rate ? loaded() : loading();
+  return (
+    <div>
+      <section>{coin ? loaded() : loading()}</section>
+     
+      <section>
+        <h1>Crypo News</h1>
+      <p>
+        Global payments giant PayPal (PYPL) is entering the cryptocurrency
+        market with its own U.S. dollar-pegged stablecoin, PayPal USD (PYUSD),
+        the company announced on Monday. The Ethereum-based token will soon be
+        available to PayPal users in the U.S. This is the first time a major
+        financial company is issuing its own stablecoin. Users can transfer
+        PYUSD between PayPal and supported external digital wallets, use the
+        tokens to pay for goods and services or convert any of PayPal's
+        supported cryptocurrencies to and from PYUSD.
+      </p>
+      </section>
+    </div>
+  );
 }
